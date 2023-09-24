@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character encoding and viewport for responsive design -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Link to external CSS stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Link to Google Font "Mooli" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
+
+    <!-- Set the title of the web page -->
+    <title>Personal To-Do List</title>
+
+    <!-- Include the JavaScript library jQuery for Bootstrap functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar with a dark theme -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand logo and title -->
+            <a class="navbar-brand" href="#">
+                <!-- Logo image -->
+                <img src="https://media.istockphoto.com/id/1138356518/vector/clipboard-witch-checklist-wishlist-line-icon-editable-stroke-pixel-perfect-for-mobile-and-web.jpg?s=612x612&w=0&k=20&c=uPOrOwUNoMFNada3DSDbUVwq7O2t2Kq6-Y-xYF9Z44c="
+                    width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                <!-- To-Do List title -->
+                To-Do List
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container my-4">
+        <!-- Heading for "Things to Do Today" -->
+        <h2 class="text-center"><b>Things to Do Today</b></h2>
+
+        <!-- Input field for task title -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Task to Do</label>
+            <input type="text" class="form-control" id="title" placeholder="Write down the title of your task">
+        </div>
+
+        <!-- Textarea for task description -->
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3"
+                placeholder="Write a brief description of the task you want to do"></textarea>
+        </div>
+
+        <!-- Input field for due date and time (optional) -->
+        <div class="mb-3">
+            <label for="dueDateTime" class="form-label">Due Date and Time (optional)</label>
+            <input type="datetime-local" class="form-control" id="dueDateTime"
+                style="width: calc(33% - 10px);">
+        </div>
+
+        <!-- Button to add a task to the list -->
+        <button type="button" id="add" class="btn btn-secondary">Add to List</button>
+
+        <!-- Button to reset the entire task list -->
+        <button type="button" id="reset" class="btn btn-danger" data-toggle="popover" data-placement="right"
+            data-content="This will clear your whole to-do list.">Reset List</button>
+
+        <!-- Heading for "Your Tasks" -->
+        <h2 class="tasks text-center">Your Tasks</h2>
+
+        <!-- Table to display the task list with headers -->
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Task No.</th>
+                    <th scope="col">Task Brief</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Due Date & Time</th>
+                    <th scope="col">Edit Deadline</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+
+            <!-- Table body where task rows will be inserted dynamically -->
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer with copyright information -->
+    <div class="container-fluid bg-dark text-light text-center py-2">
+        <small>&#169; Made by Sparsh Kumar. All rights reserved.</small>
+    </div>
+
+    <!-- Include the JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>

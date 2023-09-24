@@ -1,0 +1,53 @@
+body::after {
+    content: "";
+    background-image: url('https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h2 {
+    font-family: 'Mooli', sans-serif;
+}
+/* CSS for Task List Animation */
+
+/* Initial state: tasks are transparent */
+.table tr {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* When tasks are added or updated, they fade in */
+.table tr.added-task,
+.table tr.updated-task {
+    opacity: 1;
+}
+/* CSS for Hover Effects on Buttons */
+
+/* Add a background color when hovering over buttons */
+.btn:hover {
+    background-color: #6c757d;
+    color: #fff; /* Change text color for better contrast */
+}
+
+/* CSS for Task List Animation */
+
+/* Initial state: tasks are transparent */
+.table tr {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* When tasks are added or updated, they fade in */
+.table tr.added-task,
+.table tr.updated-task {
+    opacity: 1;
+}
+
